@@ -1,24 +1,27 @@
 import java.util.Random;
 public class EmployeeWage {
     public static void main(String[] args){
-        System.out.print("Welcome to Employee Wage Computation");
+        System.out.print("Welcome to Employee Wage Computation: ");
         Random ran = new Random();
-        boolean attend = ran.nextBoolean();
-        int employee_rate_hr = 20, work_hr;
+        int attend = ran.nextInt(3);
+        int employee_rate_hr = 20, work_hr=0;
         System.out.println(attend);
-        if (attend==true){
-            int attend_hr = ran.nextInt(2);
-            if (attend_hr==0){
+        switch (attend) {
+            case 0:
+                System.out.println("Employee Absent");
+                break;
+            case 1:
                 work_hr = 4;
-            }
-            else{
-                work_hr = 8;
-            }
+                break;
+            case 2:
+                work_hr =8;
+                break;
+            default:
+                break;
+        }
+        if (work_hr!=0){
             int x = work_hr*employee_rate_hr;
             System.out.println("Employee Present and it's wage is "+x);
-        }
-        else{
-            System.out.println("Employee Absent");
         }
     }
 }
