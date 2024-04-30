@@ -4,11 +4,13 @@ public class EmployeeWage {
         System.out.print("Welcome to Employee Wage Computation");
         Random ran = new Random();
         boolean attend = ran.nextBoolean();
+        int employee_rate_hr = 20, work_hr=8;
         System.out.println(attend);
-        if (attend==false){
-            System.out.println("Absent");
+        if (attend==true){
+            int x = work_hr*employee_rate_hr;
+            System.out.println("Employee Present and it's wage is "+x);
         }else{
-            System.out.println("Present");
+            System.out.println("Absent");
         }
     }
 }
