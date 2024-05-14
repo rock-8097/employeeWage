@@ -23,10 +23,11 @@ public class OopsEmployeeWage {
         return fullday;//Return wage time in Hour
     }
     public static int calculateWageMonth(){
-        int totalWage=0;
-        for(int i=0; i<20; i++){//Loop for 20 Days
+        int totalWage=0, attend_count=0;
+        while(totalWage<101 && attend_count<20){//Loop for 20 Days or completed 100 Hr
             int total = calculateWage();
             totalWage+=total;
+            attend_count+=1;
         }
         return totalWage;//Return 20 Day Working Hours
     }
