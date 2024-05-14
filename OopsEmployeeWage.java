@@ -6,13 +6,20 @@ public class OopsEmployeeWage {
         int attend = ran.nextInt(2);
         return attend;
     }
-    public static void main(String[] args) {
+    public static int calculateWage(){
         int employee=randomeNumber();
+        int fullday;
         if (employee==1){
-            System.out.println("Emplyee present");
+            fullday=8;
         }else{
-            System.out.println("Emplyee Not present");
+            fullday=0;
         }
+        return fullday;
+    }
+    public static void main(String[] args) {
+        int total = calculateWage();
+        int wage_hour = 20;
+        System.out.println(total*wage_hour);
     }
     
 }
