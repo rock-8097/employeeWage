@@ -3,21 +3,19 @@ import java.util.Random;
 public class OopsEmployeeWage {
     public static int randomeNumber(){
         Random ran = new Random();
-        int attend = ran.nextInt(3);//Create randome 0-2 number
-        return attend;//Return randome number
+        int attend = ran.nextInt(3);
+        return attend;//Return Randome Value
     }
     public static int calculateWage(){
         int employee=randomeNumber();
         int fullday;
         if (employee==1){
-            fullday=8;//Full Day Wage
-        }else if(employee==2){
-            fullday=4;//Part time Wage
+            fullday=8;
         }
         else{
-            fullday=0;//Employee Absent
+            fullday=0;
         }
-        return fullday;//Return wage time in Hour
+        return fullday;//Return hour
     }
     public static void main(String[] args) {
         int total = calculateWage();
