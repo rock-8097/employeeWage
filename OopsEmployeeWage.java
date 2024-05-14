@@ -9,13 +9,16 @@ public class OopsEmployeeWage {
     public static int calculateWage(){
         int employee=randomeNumber();
         int fullday;
-        if (employee==1){
-            fullday=8;//Full Day Wage
-        }else if(employee==2){
-            fullday=4;//Part time Wage
-        }
-        else{
-            fullday=0;//Employee Absent
+        switch (employee) {
+            case 1:
+                fullday = 8; // Full Day Wage
+                break;
+            case 2:
+                fullday = 4; // Part time Wage
+                break;
+            default:
+                fullday = 0; // Employee Absent
+                break;
         }
         return fullday;//Return wage time in Hour
     }
