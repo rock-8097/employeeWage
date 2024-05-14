@@ -22,9 +22,17 @@ public class OopsEmployeeWage {
         }
         return fullday;//Return wage time in Hour
     }
+    public static int calculateWageMonth(){
+        int totalWage=0;
+        for(int i=0; i<20; i++){//Loop for 20 Days
+            int total = calculateWage();
+            totalWage+=total;
+        }
+        return totalWage;//Return 20 Day Working Hours
+    }
     public static void main(String[] args) {
-        int total = calculateWage();
+        int work=calculateWageMonth();
         int wage_hour = 20;
-        System.out.println(total*wage_hour);
+        System.out.println(work*wage_hour);
     }
 }
