@@ -1,13 +1,19 @@
 import java.util.Random;
 
 public class Employee {
-    public static int randomeNumber() {
+    private Company company;
+
+    public Employee(Company company) {
+        this.company = company;
+    }
+
+    public int randomeNumber() {
         Random ran = new Random();
         int attend = ran.nextInt(3); // Create random number between 0-2
         return attend; // Return random number
     }
 
-    public static int calculateWage() {
+    public int calculateWage() {
         int employee = randomeNumber();
         int fullday;
         switch (employee) {
@@ -21,10 +27,10 @@ public class Employee {
                 fullday = 0; // Employee Absent
                 break;
         }
-        return fullday; // Return wage time in hours
+        return fullday * company.getWageRate(); // Return wage based on company's rate
     }
 
-    public static int calculateWageMonth() {
+    public int calculateWageMonth() {
         int totalWage = 0, attend_count = 0;
         while (totalWage < 101 && attend_count < 20) { // Loop for 20 Days or completed 100 Hrs
             int total = calculateWage();
