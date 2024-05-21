@@ -1,13 +1,8 @@
 public class EmpWageBuilder {
-    private Employee employee;
-
-    public EmpWageBuilder(Company company) {
+       
+    public int computeWage(Company company) {
         //new employee
-        employee = new Employee(company);
-    }
-
-    public int computeWage() {
-        // company wage for employee
+        Employee employee = new Employee(company);
         return employee.calculateWageMonth();
     }
 }
