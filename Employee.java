@@ -14,20 +14,22 @@ public class Employee {
     }
 
     public int calculateWage() {
+        int fullday= company.getFullday();
+        int halfday = company.getHalfday();
         int employee = randomeNumber();
-        int fullday;
+        int presentDayTime;
         switch (employee) {
             case 1:
-                fullday = 8; // Full Day Wage
+                presentDayTime=fullday ; // Full Day Wage
                 break;
             case 2:
-                fullday = 4; // Part-time Wage
+                presentDayTime= halfday; // Part-time Wage
                 break;
             default:
-                fullday = 0; // Employee Absent
+                presentDayTime=0; // Employee Absent
                 break;
         }
-        return fullday * company.getWageRate(); // Return wage based on company's rate
+        return presentDayTime * company.getWageRate(); // Return wage based on company's rate
     }
 
     public int calculateWageMonth() {
