@@ -1,7 +1,6 @@
-public class EmpWageBuilder {
+class EmpWageBuilder implements EmpWageCalculator {
        
-    public int computeWage(Company company) {
-        //new employee
+    public int calculateWage(Company company) {
         Employee employee = new Employee(company);
         return employee.calculateWageMonth();
     }
