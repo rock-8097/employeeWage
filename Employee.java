@@ -16,7 +16,7 @@ class Employee {
         int fullDay = company.getFullDay();
         int halfDay = company.getHalfDay();
         int employeeAttendance = randomNumber();
-        int presentDayTime;
+        int presentDayTime=0;
         switch (employeeAttendance) {
             case 1:
                 presentDayTime = fullDay; // Full Day Wage
@@ -25,7 +25,7 @@ class Employee {
                 presentDayTime = halfDay; // Part-time Wage
                 break;
             default:
-                presentDayTime = 0; // Employee Absent
+                // Employee Absent
                 break;
         }
         return presentDayTime * company.getWageRate(); // Return wage based on company's rate

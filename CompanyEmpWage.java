@@ -18,7 +18,7 @@ public class CompanyEmpWage {
     public void computeEmpWage() {
         EmpWageBuilder empWageBuilder = new EmpWageBuilder();
         for (Company company : companies) {
-            int totalEmpWage = empWageBuilder.computeWage(company);
+            int totalEmpWage = empWageBuilder.calculateWage(company);
             System.out.println("Total wage for " + company.getName() + ": " + totalEmpWage);
         }
     }
