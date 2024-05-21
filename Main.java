@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Company company1 = new Company("Company A", 20);
-        Company company2 = new Company("Company B", 25);
+        Company company1 = new Company("Company A", 20, 8, 4);
+        Company company2 = new Company("Company B", 25, 12, 6);
 
         EmpWageBuilder emp1 = new EmpWageBuilder(company1);
         EmpWageBuilder emp2 = new EmpWageBuilder(company2);
