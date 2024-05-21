@@ -1,46 +1,31 @@
-public class Company {
+class Company {
     private String name;
     private int wageRate;
-    private int fullday;
-    private int halfday;
-
+    private int fullDay;
+    private int halfDay;
     
-    public Company(String name, int wageRate, int fullday, int halfday) {
+    //constructor
+    public Company(String name, int wageRate, int fullDay, int halfDay) {
         this.name = name;
         this.wageRate = wageRate;
-        this.fullday = fullday;
-        this.halfday = halfday;
+        this.fullDay = fullDay;
+        this.halfDay = halfDay;
     }
     
+    // Getters and setters
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getWageRate() {
         return wageRate;
     }
 
-    public void setWageRate(int wageRate) {
-        this.wageRate = wageRate;
+    public int getFullDay() {
+        return fullDay;
     }
 
-    public int getFullday() {
-        return fullday;
-    }
-    
-    public void setFullday(int fullday) {
-        this.fullday = fullday;
-    }
-    
-    public int getHalfday() {
-        return halfday;
-    }
-    
-    public void setHalfday(int halfday) {
-        this.halfday = halfday;
+    public int getHalfDay() {
+        return halfDay;
     }
 }
